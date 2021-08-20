@@ -1,0 +1,16 @@
+{
+  "name": "tvx-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tvx-plugin-module.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValeraGin/tvx-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValeraGin/tvx-plugin/issues"
+  },
+  "homepage": "https://github.com/ValeraGin/tvx-plugin#readme"
+}
