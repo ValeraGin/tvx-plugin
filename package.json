@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/ValeraGin/tvx-plugin.git"
   },
-  "author": "",
+  "author": "Benjamin Zachey",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ValeraGin/tvx-plugin/issues"
