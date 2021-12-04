@@ -45,21 +45,19 @@ declare interface MSXMenuRoot extends AnyObject {
 /** MSX - Menu Root Style
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Root_Object}
  */
-declare enum MSXMenuRootStyle {
-    Default = "default",
-    Flat = "flat",
-    FlatSeparator = "flat-separator",
-    Overlay = "overlay",
-    OverlaySeparator = "overlay-separator"
-}
+declare type MSXMenuRootStyle =
+    "default" |
+    "flat" |
+    "flat-separator" |
+    "overlay" |
+    "overlay-separator"
 
 /** MSX - Menu Root Logo Size
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Root_Object}
  */
-declare enum MSXMenuRootLogoSize {
-    Small = "small",
-    Large = "large"
-}
+declare type MSXMenuRootLogoSize =
+    "small" |
+    "large"
 
 /** MSX - Menu Item Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Item_Object}
@@ -86,11 +84,10 @@ declare interface MSXMenuItem extends AnyObject {
 /** MSX - Menu Item Type
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Item_Object}
  */
-declare enum MSXMenuItemtType {
-    Default = "default",
-    Separator = "separator",
-    Settings = "settings"
-}
+declare type MSXMenuItemtType =
+    "default" |
+    "separator" |
+    "settings";
 
 /** MSX - Content Root Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
@@ -130,20 +127,18 @@ declare interface MSXContentRoot extends AnyObject {
 /** MSX - Content Root Type
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
  */
-declare enum MSXContentRootType {
-    Pages = "pages",
-    List = "list"
-}
+declare type MSXContentRootType =
+    "pages" |
+    "list"
 
 /** MSX - Content Root Preload
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
  */
-declare enum MSXContentRootPreload {
-    None = "none",
-    Next = "next",
-    Prev = "prev",
-    Full = "full"
-}
+declare type MSXContentRootPreload =
+    "none" |
+    "next" |
+    "prev" |
+    "full"
 
 /** MSX - Content Page Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Page_Object}
@@ -224,42 +219,39 @@ declare interface MSXContentItem extends AnyObject {
 /** MSX - Content Item Type
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
  */
-declare enum MSXContentItemType {
-    Default = "default",
-    Teaser = "teaser",
-    Button = "button",
-    Separate = "separate",
-    Space = "space",
-    Control = "control"
-}
+declare type MSXContentItemType =
+    "default" |
+    "teaser" |
+    "button" |
+    "separate" |
+    "space" |
+    "control"
 
 /** MSX - Content Item Icon Size
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
  */
-declare enum MSXContentItemIconSize {
-    Small = "small",
-    Medium = "medium",
-    Large = "large",
-    ExtraLarge = "extra-large"
-}
+declare type MSXContentItemIconSize =
+    "small" |
+    "medium" |
+    "large" |
+    "extra-large"
 
 /** MSX - Content Item Image Filler
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
  */
-declare enum MSXContentItemImageFiller {
-    Default = "default",
-    Width = "width",
-    WidthTop = "width-top",
-    WidthCenter = "width-center",
-    WidthBottom = "width-bottom",
-    Height = "height",
-    HeightLeft = "height-left",
-    HeightCenter = "height-center",
-    HeightRight = "height-right",
-    Fit = "fit",
-    Cover = "cover",
-    Smart = "smart"
-}
+declare type MSXContentItemImageFiller =
+    "default" |
+    "width" |
+    "width-top" |
+    "width-center" |
+    "width-bottom" |
+    "height" |
+    "height-left" |
+    "height-center" |
+    "height-right" |
+    "fit" |
+    "cover" |
+    "smart"
 
 /** MSX - Content Item Image Overlay
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
