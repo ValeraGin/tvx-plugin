@@ -1,4 +1,4 @@
-// Type definitions for TVX Plugin v0.0.56.0 (Module)
+// Type definitions for TVX Plugin v0.0.58.0 (Module)
 // Project: https://msx.benzac.de/info/
 // Definitions by: Benjamin Zachey
 
@@ -46,18 +46,18 @@ declare interface MSXMenuRoot extends AnyObject {
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Root_Object}
  */
 declare type MSXMenuRootStyle =
-    "default" |
-    "flat" |
-    "flat-separator" |
-    "overlay" |
-    "overlay-separator"
+  "default" |
+  "flat" |
+  "flat-separator" |
+  "overlay" |
+  "overlay-separator";
 
 /** MSX - Menu Root Logo Size
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Root_Object}
  */
 declare type MSXMenuRootLogoSize =
-    "small" |
-    "large"
+  "small" |
+  "large";
 
 /** MSX - Menu Item Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Item_Object}
@@ -85,9 +85,9 @@ declare interface MSXMenuItem extends AnyObject {
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Item_Object}
  */
 declare type MSXMenuItemtType =
-    "default" |
-    "separator" |
-    "settings";
+  "default" |
+  "separator" |
+  "settings";
 
 /** MSX - Content Root Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
@@ -128,17 +128,17 @@ declare interface MSXContentRoot extends AnyObject {
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
  */
 declare type MSXContentRootType =
-    "pages" |
-    "list"
+  "pages" |
+  "list";
 
 /** MSX - Content Root Preload
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
  */
 declare type MSXContentRootPreload =
-    "none" |
-    "next" |
-    "prev" |
-    "full"
+  "none" |
+  "next" |
+  "prev" |
+  "full";
 
 /** MSX - Content Page Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Page_Object}
@@ -220,57 +220,55 @@ declare interface MSXContentItem extends AnyObject {
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
  */
 declare type MSXContentItemType =
-    "default" |
-    "teaser" |
-    "button" |
-    "separate" |
-    "space" |
-    "control"
+  "default" |
+  "teaser" |
+  "button" |
+  "separate" |
+  "space" |
+  "control";
 
 /** MSX - Content Item Icon Size
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
  */
 declare type MSXContentItemIconSize =
-    "small" |
-    "medium" |
-    "large" |
-    "extra-large"
+  "small" |
+  "medium" |
+  "large" |
+  "extra-large";
 
 /** MSX - Content Item Image Filler
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
  */
 declare type MSXContentItemImageFiller =
-    "default" |
-    "width" |
-    "width-top" |
-    "width-center" |
-    "width-bottom" |
-    "height" |
-    "height-left" |
-    "height-center" |
-    "height-right" |
-    "fit" |
-    "cover" |
-    "smart"
+  "default" |
+  "width" |
+  "width-top" |
+  "width-center" |
+  "width-bottom" |
+  "height" |
+  "height-left" |
+  "height-center" |
+  "height-right" |
+  "fit" |
+  "cover" |
+  "smart";
 
 /** MSX - Content Item Image Overlay
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
  */
-declare enum MSXContentItemImageOverlay {
-    Automatic = -1,
-    Off = 0,
-    On = 1,
-    InvertedAutomatic = 2,
-    InvertedOff = 3,
-    InvertedOn = 4
-}
+declare type MSXContentItemImageOverlay =
+  -1 |
+  0 |
+  1 |
+  2 |
+  3 |
+  4;
 
 //** MSX - Transparent*/
-declare enum MSXTransparent {
-    Off = 0,
-    On = 1,
-    ContextRelated = 2
-}
+declare type MSXTransparent =
+  0 |
+  1 |
+  2;
 
 //** MSX - Ready*/
 declare interface MSXReady {
@@ -844,13 +842,13 @@ declare interface TVXTools {
     getAbsoluteUrl(url: string): string;
     getRootPath(subPath: string, trim?: boolean): string;
     exprEscape(
-        text: string,
-        exprStart: string,
-        exprEnd: string,
-        textCallback: (text: string, state: any) => string,
-        exprCallback: (expr: string, state: any) => string,
-        completeCallback: (state: any) => string,
-        state: any): string;
+      text: string,
+      exprStart: string,
+      exprEnd: string,
+      textCallback: (text: string, state: any) => string,
+      exprCallback: (expr: string, state: any) => string,
+      completeCallback: (state: any) => string,
+      state: any): string;
 }
 
 declare interface TVXDateTools {
@@ -1010,6 +1008,8 @@ declare abstract class TVXStorage {
     clear(): void;
     getType(): string;
     setType(type: string): void;
+    isReady(): boolean;
+    onReady(handler: () => void): void;
 }
 
 declare abstract class TVXUrlParams {
@@ -1296,7 +1296,11 @@ declare interface TVXPluginTools {
     checkApplication(data: MSXAttachedInfo, minVersion: string, requiredName?: string): boolean;
     checkContent(data: MSXAttachedInfo, minVersion: string, requiredName?: string): boolean;
     isSameContentState(state: MSXAttachedContentState, state2: MSXAttachedContentState): boolean;
-    createChangedContentState(currentState: TVXChangedContentState, newState: TVXChangedContentState): TVXChangedContentState,
+    createChangedContentState(currentState: TVXChangedContentState, newState: TVXChangedContentState): TVXChangedContentState;
+    isReady(): boolean;
+    onReady(handler: () => void): void;
+    startInitService(): void;
+    stopInitService(): void;
 }
 
 declare interface TVXChangedContentState extends MSXAttachedContentState {
