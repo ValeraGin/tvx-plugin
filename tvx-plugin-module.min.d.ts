@@ -1,4 +1,4 @@
-// Type definitions for TVX Plugin v0.0.60.0 (Module)
+// Type definitions for TVX Plugin v0.0.62.0 (Module)
 // Project: https://msx.benzac.de/info/
 // Definitions by: Benjamin Zachey
 
@@ -905,6 +905,7 @@ declare interface TVXPropertyTools {
     remove(data: AnyObject, key: string): void;
     clear(data: AnyObject): void;
     count(data: AnyObject): number;
+    extend(data: AnyObject, extension: AnyObject): void;
 }
 
 declare interface TVXVideoState {
@@ -972,6 +973,8 @@ declare interface TVXAction {
     readonly SWIPE_DOWN: number;
     readonly SLEEP: number;
     readonly WAKE_UP: number;
+    readonly CONNECTION_UP: number;
+    readonly CONNECTION_DOWN: number;
     readonly DEBUG: number;
     readonly UNKNOWN: number;
     actionToStr(action: number): string;
@@ -1184,14 +1187,6 @@ declare abstract class TVXClock {
     stop(): void;
 }
 
-declare interface TVXServices {
-    readonly logger: TVXLogger;
-    readonly cookies: TVXCookies;
-    readonly storage: TVXStorage;
-    readonly urlParams: TVXUrlParams;
-    readonly ajax: TVXAjax;
-}
-
 declare abstract class TVXDataLoader {
     constructor();
     load(url: string, cacheId: string, callback?: TVXDataLoaderCallback, options?: TVXAjaxOptions): void;
@@ -1202,6 +1197,15 @@ declare abstract class TVXDataLoader {
 declare interface TVXDataLoaderCallback {
     success?(data: any, cached: boolean): void;
     error?(message: string): void;
+}
+
+declare interface TVXServices {
+    readonly logger: TVXLogger;
+    readonly cookies: TVXCookies;
+    readonly storage: TVXStorage;
+    readonly urlParams: TVXUrlParams;
+    readonly ajax: TVXAjax;
+    readonly loader: TVXDataLoader;
 }
 
 declare abstract class TVXDataService {
@@ -1803,6 +1807,8 @@ declare interface TVXVideoPluginPlayer {
      * Handles an event. The data.event property can contain following values:
      * - "app:suspend"
      * - "app:resume"
+     * - "app:connect"
+     * - "app:disconnect"
      * - "app:time" (data.offset and data.zoneOffset properties contain the new time and zone offset)
      * - "app:result" (data.id property contains the request ID, data.code property contains the result code, and data.extra property contains the extra data)
      * - "video:load"* (data.info property contains the loaded video info and data.data property contains the active video data before this event occurred)
@@ -2053,6 +2059,8 @@ declare interface TVXInteractionPluginHandler {
      * Handles an event. The data.event property can contain following values:
      * - "app:suspend"
      * - "app:resume"
+     * - "app:connect"
+     * - "app:disconnect"
      * - "app:time" (data.offset and data.zoneOffset properties contain the new time and zone offset)
      * - "app:result" (data.id property contains the request ID, data.code property contains the result code, and data.extra property contains the extra data)
      * - "video:load" (data.info property contains the loaded video info and data.data property contains the active video data before this event occurred)
@@ -2121,8 +2129,8 @@ export const LogLevel: TVXLogLevel;
 export class Logger extends TVXLogger { }
 export class Dictionary extends TVXDictionary { }
 export class Clock extends TVXClock { }
-export const Services: TVXServices;
 export class DataLoader extends TVXDataLoader { }
+export const Services: TVXServices;
 export class DataService extends TVXDataService { }
 export class BlobService extends TVXBlobService { }
 export class RequestService extends TVXRequestService { }
