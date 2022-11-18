@@ -1,4 +1,4 @@
-// Type definitions for TVX Plugin v0.0.63.1 (Module)
+// Type definitions for TVX Plugin v0.0.64.1 (Module)
 // Project: https://msx.benzac.de/info/
 // Definitions by: Benjamin Zachey
 
@@ -8,7 +8,7 @@ declare interface AnyObject {
 
 /** MSX - Start Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Start_Object}
-*/
+ */
 declare interface MSXStart extends AnyObject {
     name: string;
     version: string;
@@ -18,7 +18,7 @@ declare interface MSXStart extends AnyObject {
 
 /** MSX - Menu Root Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Root_Object}
-*/
+ */
 declare interface MSXMenuRoot extends AnyObject {
     name?: string;
     version?: string;
@@ -44,24 +44,24 @@ declare interface MSXMenuRoot extends AnyObject {
 
 /** MSX - Menu Root Style
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Root_Object}
-*/
+ */
 declare type MSXMenuRootStyle =
-    "default" |
-    "flat" |
-    "flat-separator" |
-    "overlay" |
-    "overlay-separator";
+  "default" |
+  "flat" |
+  "flat-separator" |
+  "overlay" |
+  "overlay-separator";
 
 /** MSX - Menu Root Logo Size
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Root_Object}
-*/
+ */
 declare type MSXMenuRootLogoSize =
-    "small" |
-    "large";
+  "small" |
+  "large";
 
 /** MSX - Menu Item Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Item_Object}
-*/
+ */
 declare interface MSXMenuItem extends AnyObject {
     id?: string;
     type?: MSXMenuItemtType;
@@ -83,15 +83,15 @@ declare interface MSXMenuItem extends AnyObject {
 
 /** MSX - Menu Item Type
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Menu_Item_Object}
-*/
+ */
 declare type MSXMenuItemtType =
-    "default" |
-    "separator" |
-    "settings";
+  "default" |
+  "separator" |
+  "settings";
 
 /** MSX - Content Root Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
-*/
+ */
 declare interface MSXContentRoot extends AnyObject {
     name?: string;
     version?: string;
@@ -126,23 +126,23 @@ declare interface MSXContentRoot extends AnyObject {
 
 /** MSX - Content Root Type
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
-*/
+ */
 declare type MSXContentRootType =
-    "pages" |
-    "list";
+  "pages" |
+  "list";
 
 /** MSX - Content Root Preload
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Root_Object}
-*/
+ */
 declare type MSXContentRootPreload =
-    "none" |
-    "next" |
-    "prev" |
-    "full";
+  "none" |
+  "next" |
+  "prev" |
+  "full";
 
 /** MSX - Content Page Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Page_Object}
-*/
+ */
 declare interface MSXContentPage extends AnyObject {
     display?: boolean;
     important?: boolean;
@@ -161,7 +161,7 @@ declare interface MSXContentPage extends AnyObject {
 
 /** MSX - Content Item Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
-*/
+ */
 declare interface MSXContentItem extends AnyObject {
     id?: string;
     type?: MSXContentItemType;
@@ -222,57 +222,57 @@ declare interface MSXContentItem extends AnyObject {
 
 /** MSX - Content Item Type
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
-*/
+ */
 declare type MSXContentItemType =
-    "default" |
-    "teaser" |
-    "button" |
-    "separate" |
-    "space" |
-    "control";
+  "default" |
+  "teaser" |
+  "button" |
+  "separate" |
+  "space" |
+  "control";
 
 /** MSX - Content Item Icon Size
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
-*/
+ */
 declare type MSXContentItemIconSize =
-    "small" |
-    "medium" |
-    "large" |
-    "extra-large";
+  "small" |
+  "medium" |
+  "large" |
+  "extra-large";
 
 /** MSX - Content Item Image Filler
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
-*/
+ */
 declare type MSXContentItemImageFiller =
-    "default" |
-    "width" |
-    "width-top" |
-    "width-center" |
-    "width-bottom" |
-    "height" |
-    "height-left" |
-    "height-center" |
-    "height-right" |
-    "fit" |
-    "cover" |
-    "smart";
+  "default" |
+  "width" |
+  "width-top" |
+  "width-center" |
+  "width-bottom" |
+  "height" |
+  "height-left" |
+  "height-center" |
+  "height-right" |
+  "fit" |
+  "cover" |
+  "smart";
 
 /** MSX - Content Item Image Overlay
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Content_Item_Object}
-*/
+ */
 declare type MSXContentItemImageOverlay =
-    -1 |
-    0 |
-    1 |
-    2 |
-    3 |
-    4;
+  -1 |
+  0 |
+  1 |
+  2 |
+  3 |
+  4;
 
 //** MSX - Transparent*/
 declare type MSXTransparent =
-    0 |
-    1 |
-    2;
+  0 |
+  1 |
+  2;
 
 //** MSX - Ready*/
 declare interface MSXReady {
@@ -282,7 +282,7 @@ declare interface MSXReady {
 
 /** MSX - Live Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Live_Object}
-*/
+ */
 declare interface MSXLive extends MSXLiveProperties, MSXLiveAction {
     type?: MSXLiveType;
     from?: number;
@@ -298,27 +298,27 @@ declare interface MSXLive extends MSXLiveProperties, MSXLiveAction {
 
 /** MSX - Live Type
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Live_Object}
-*/
+ */
 declare type MSXLiveType =
-    "schedule" |
-    "lifetime" |
-    "airtime" |
-    "playback" |
-    "setup";
+  "schedule" |
+  "lifetime" |
+  "airtime" |
+  "playback" |
+  "setup";
 
 /** MSX - Live Source
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Live_Object}
-*/
+ */
 declare type MSXLiveSource =
-    "id" |
-    "url" |
-    "key" |
-    "current" |
-    "none";
+  "id" |
+  "url" |
+  "key" |
+  "current" |
+  "none";
 
 /** MSX - Live Action
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Live_Object}
-*/
+ */
 declare interface MSXLiveAction {
     action?: string;
     data?: AnyObject;
@@ -326,7 +326,7 @@ declare interface MSXLiveAction {
 
 /** MSX - Live Content Properties
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Live_Object}
-*/
+ */
 declare interface MSXLiveProperties {
     color?: string;
     title?: string;
@@ -352,14 +352,14 @@ declare interface MSXLiveProperties {
 
 /** MSX - Live State Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Live_Object}
-*/
+ */
 declare interface MSXLiveState extends MSXLiveProperties, MSXLiveAction {
     execute?: MSXLiveAction;
 }
 
 /** MSX - Live State Object (Running)
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Live_Object}
-*/
+ */
 declare interface MSXLiveStateRunning extends MSXLiveState {
     quartile1?: MSXLiveProperties;
     quartile2?: MSXLiveProperties;
@@ -369,7 +369,7 @@ declare interface MSXLiveStateRunning extends MSXLiveState {
 
 /** MSX - Selection Object
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Selection_Object}
-*/
+ */
 declare interface MSXSelection {
     important?: boolean;
     headline?: string;
@@ -380,28 +380,28 @@ declare interface MSXSelection {
 
 /** MSX - URL Parameters
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=URL_Parameters}
-*/
+ */
 declare interface MSXURLParameters {
     [key: string]: string;
 }
 
 /** MSX - Extended Properties
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Extended_Properties}
-*/
+ */
 declare interface MSXExtendedProperties {
     [key: string]: string | number | boolean;
 }
 
 /** MSX - Dictionary Properties
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Dictionary_Structure}
-*/
+ */
 declare interface MSXDictionaryProperties {
     [key: string]: string;
 }
 
 /** MSX - Attached Data
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedData {
     data?: AnyObject;
     error?: string;
@@ -409,21 +409,21 @@ declare interface MSXAttachedData {
 
 /** MSX - Attached Code
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedCode extends MSXAttachedData {
     code?: string;
 }
 
 /** MSX - Attached Video
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedVideo extends MSXAttachedData {
     video?: MSXAttachedVideoContainer;
 }
 
 /** MSX - Attached Video Container (request-dependent)
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedVideoContainer {
     info?: MSXAttachedVideoInfo;
     data?: MSXAttachedVideoData;
@@ -434,7 +434,7 @@ declare interface MSXAttachedVideoContainer {
 
 /** MSX - Attached Video Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedVideoInfo {
     id: string;
     index: number;
@@ -453,7 +453,7 @@ declare interface MSXAttachedVideoInfo {
 
 /** MSX - Attached Video Data
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedVideoData {
     state: number;
     position: number;
@@ -464,7 +464,7 @@ declare interface MSXAttachedVideoData {
 
 /** MSX - Attached Video Resume Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedVideoResumeInfo {
     key: string;
     count: number;
@@ -475,7 +475,7 @@ declare interface MSXAttachedVideoResumeInfo {
 
 /** MSX - Attached Video Volume Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedVideoVolumeInfo {
     type: string;
     level: number;
@@ -484,14 +484,14 @@ declare interface MSXAttachedVideoVolumeInfo {
 
 /** MSX - Attached Slider
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedSlider extends MSXAttachedData {
     slider?: MSXAttachedSliderContainer;
 }
 
 /** MSX - Attached Slider Container
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedSliderContainer {
     state: number;
     id: string;
@@ -512,7 +512,7 @@ declare interface MSXAttachedSliderContainer {
 
 /** MSX - Attached Application Menu Button
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedApplicationMenuButton {
     action: number;
     keyCode: number;
@@ -520,7 +520,7 @@ declare interface MSXAttachedApplicationMenuButton {
 
 /** MSX - Attached Application Settings
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedApplicationSettings {
     validateLinks: number;
     randomPlayback: number;
@@ -531,7 +531,7 @@ declare interface MSXAttachedApplicationSettings {
 
 /** MSX - Attached Application Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedApplicationInfo {
     name: string;
     version: string;
@@ -541,7 +541,7 @@ declare interface MSXAttachedApplicationInfo {
 
 /** MSX - Attached Framework Setttings
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedFrameworkSetttings {
     animate: number;
     transform: number;
@@ -566,7 +566,7 @@ declare interface MSXAttachedFrameworkSetttings {
 
 /** MSX - Attached Framework Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedFrameworkInfo {
     name: string;
     version: string;
@@ -576,7 +576,7 @@ declare interface MSXAttachedFrameworkInfo {
 
 /** MSX - Attached Content State
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedContentState {
     start: boolean;
     restored: boolean;
@@ -607,7 +607,7 @@ declare interface MSXAttachedContentState {
 
 /** MSX - Attached Content Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedContentInfo {
     name: string;
     version: string;
@@ -621,7 +621,7 @@ declare interface MSXAttachedContentInfo {
 
 /** MSX - Attached Dictionary Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedDictionaryInfo {
     url: string;
     name: string;
@@ -631,7 +631,7 @@ declare interface MSXAttachedDictionaryInfo {
 
 /** MSX - Attached Screen Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedScreenInfo {
     width: number;
     height: number;
@@ -641,7 +641,7 @@ declare interface MSXAttachedScreenInfo {
 
 /** MSX - Attached Time Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedTimeInfo {
     timestamp: number;
     now: number;
@@ -652,7 +652,7 @@ declare interface MSXAttachedTimeInfo {
 
 /** MSX - Attached System Info (platform-dependent)
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedSystemInfo {
     name?: string;
     model?: string;
@@ -680,14 +680,14 @@ declare interface MSXAttachedSystemInfo {
 
 /** MSX - Attached Info
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedInfo extends MSXAttachedData {
     info?: MSXAttachedInfoContainer;
 }
 
 /** MSX - Attached Info Container (request-dependent)
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedInfoContainer {
     host?: string;
     secure?: boolean;
@@ -708,35 +708,35 @@ declare interface MSXAttachedInfoContainer {
 
 /** MSX - Attached Message
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedMessage extends MSXAttachedData {
     message?: string;
 }
 
 /** MSX - Attached String
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedString extends MSXAttachedData {
     string?: string;
 }
 
 /** MSX - Attached Response
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedResponse extends MSXAttachedData {
     response?: AnyObject;
 }
 
 /** MSX - Attached Dictionary
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedDictionary extends MSXAttachedData {
     dictionary?: MSXAttachedDictionaryContainer;
 }
 
 /** MSX - Attached Dictionary Container
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedDictionaryContainer {
     name: string;
     version: string;
@@ -746,14 +746,14 @@ declare interface MSXAttachedDictionaryContainer {
 
 /** MSX - Attached Notification
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedNotification extends MSXAttachedData {
     notification?: string;
 }
 
 /** MSX - Attached Generic (request-dependent)
  * @see: {@link https://msx.benzac.de/wiki/index.php?title=Attached_Data_Examples}
-*/
+ */
 declare interface MSXAttachedGeneric extends MSXAttachedData {
     code?: string;
     video?: MSXAttachedVideoContainer;
@@ -874,13 +874,13 @@ declare interface TVXTools {
     getAbsoluteUrl(url: string): string;
     getRootPath(subPath: string, trim?: boolean): string;
     exprEscape(
-        text: string,
-        exprStart: string,
-        exprEnd: string,
-        textCallback: (text: string, state: any) => string,
-        exprCallback: (expr: string, state: any) => string,
-        completeCallback: (state: any) => string,
-        state: any): string;
+      text: string,
+      exprStart: string,
+      exprEnd: string,
+      textCallback: (text: string, state: any) => string,
+      exprCallback: (expr: string, state: any) => string,
+      completeCallback: (state: any) => string,
+      state: any): string;
 }
 
 declare interface TVXDateTools {
@@ -1390,9 +1390,9 @@ declare interface TVXVideoUpdateData {
     muted?: boolean;
 }
 
-/** This is the interface for a video/audio plugin. 
+/** This is the interface for a video/audio plugin.
  * @see: {@link http://msx.benzac.de/info/xp/?tab=VideoPlugin}
-*/
+ */
 declare interface TVXVideoPlugin {
     /**
      * Sets up the player object (see TVXVideoPluginPlayer interface).
@@ -1413,6 +1413,26 @@ declare interface TVXVideoPlugin {
     setLoadingDelay(delay: number): void;
     /** Gets the loading delay (in milliseconds). */
     getLoadingDelay(): number;
+    /**
+     * Indicates if the fullscreen mode is enabled.
+     * @param element The element that should be checked (e.g. the video element). If not specified (or not accessible), the global fullscreen mode is checked.
+     */
+    isFullscreenEnabled(element?: AnyObject): boolean;
+    /**
+     * Indicates if the fullscreen mode is active.
+     * @param element The element that should be checked (e.g. the video element). If not specified (or not accessible), the global fullscreen mode is checked.
+     */
+    isFullscreenActive(element?: AnyObject): boolean;
+    /**
+     * Requests the fullscreen mode for an element.
+     * @param element The element that should be displayed in fullscreen mode (e.g. the video element).
+     */
+    requestFullscreen(element: AnyObject): boolean;
+    /**
+     * Exits the fullscreen mode.
+     * @param element The element that is displayed in fullscreen mode (e.g. the video element). If not specified (or not accessible), the global fullscreen exit function is used.
+     */
+    exitFullscreen(element?: AnyObject): boolean;
     /**
      * Sets the state (see TVXVideoState interface).
      * @param state The state.
@@ -1568,9 +1588,9 @@ declare interface TVXVideoPlugin {
      */
     setupDurationLabel(label?: string): void;
     /**
-    * Sets up the player speed label.
-    * @param label The label. If no label is set, the default label is used.
-    */
+     * Sets up the player speed label.
+     * @param label The label. If no label is set, the default label is used.
+     */
     setupSpeedLabel(label?: string): void;
     /**
      * Sets up a player info text (only available for extended players).
@@ -1583,19 +1603,19 @@ declare interface TVXVideoPlugin {
      */
     setupInfoImage(image?: string): void;
     /**
-    * Sets up the player info overlay (only available for extended players).
-    * @param overlay The overlay type. If no overlay is set, the default overlay is used.
-    */
+     * Sets up the player info overlay (only available for extended players).
+     * @param overlay The overlay type. If no overlay is set, the default overlay is used.
+     */
     setupInfoOverlay(overlay?: string): void;
     /**
-    * Sets up the size of the player info image area (only available for extended players).
-    * @param overlay The size of the image area. If no size is set, the default size is used.
-    */
+     * Sets up the size of the player info image area (only available for extended players).
+     * @param overlay The size of the image area. If no size is set, the default size is used.
+     */
     setupInfoSize(overlay?: string): void;
     /**
-    * Sets up a custom player control action (replacement for the action that is executed if the OK key is pressed while the video/audio is in foreground).
-    * @param action The action. If no action is set, the default action is used.
-    */
+     * Sets up a custom player control action (replacement for the action that is executed if the OK key is pressed while the video/audio is in foreground).
+     * @param action The action. If no action is set, the default action is used.
+     */
     setupControlAction(action?: string): void;
     /**
      * Sets up a player button (all buttons except the eject button are supported).
@@ -1604,9 +1624,9 @@ declare interface TVXVideoPlugin {
      */
     setupButton(id: string, data?: TVXPlayerButtonData): void;
     /**
-    * Enables a player button (all buttons except the eject button are supported).
-    * @param id The button ID.
-    */
+     * Enables a player button (all buttons except the eject button are supported).
+     * @param id The button ID.
+     */
     enableButton(id: string): void;
     /**
      * Disables a player button (all buttons except the eject button are supported).
@@ -1624,9 +1644,9 @@ declare interface TVXVideoPlugin {
      */
     setupProgressPosition(position?: number): void;
     /**
-    * Sets up the player progress duration.
-    * @param duration The duration. If no duration is set, the default duration is used.
-    */
+     * Sets up the player progress duration.
+     * @param duration The duration. If no duration is set, the default duration is used.
+     */
     setupProgressDuration(duration?: number): void;
     /**
      * Sets up the player progress color.
@@ -1670,14 +1690,14 @@ declare interface TVXVideoPlugin {
     /**
      * Requests any data (e.g. "info", "video", "code", etc.).
      * @param dataId The data ID.
-     * @param callback The callback that contains the result data. 
+     * @param callback The callback that contains the result data.
      * @param data Any request-related data.
      */
     requestData(dataId: string, callback?: (data: MSXAttachedGeneric) => void, data?: AnyObject): void;
     /**
      * Requests a response from the interaction plugin.
      * @param dataId The data ID.
-     * @param callback The callback that contains the result data. 
+     * @param callback The callback that contains the result data.
      * @param data Any request-related data.
      */
     requestInteractionResponse(dataId: string, callback?: (data: MSXAttachedResponse) => void, data?: AnyObject): void;
@@ -1775,7 +1795,7 @@ declare interface TVXVideoPlugin {
      */
     removeContentObserver(name: string): void;
     /**
-     * Removes all content observers.     
+     * Removes all content observers.
      */
     clearContentObservers(): void;
     /** Initializes the player. */
@@ -1795,8 +1815,8 @@ declare interface TVXVideoPlugin {
     stopPlayback(): void;
     /** Cancels the playback. */
     cancelPlayback(): void;
-    /** 
-     * Starts a loading process (shows a busy indicator after the loading delay). 
+    /**
+     * Starts a loading process (shows a busy indicator after the loading delay).
      * @param restart Indicates if a running loading delay should be restarted (default: true).
      */
     startLoading(restart?: boolean): void;
@@ -1906,9 +1926,9 @@ declare interface TVXVideoPluginPlayer {
     handleRequest?(dataId: string, data: AnyObject, callback: (respData?: AnyObject) => void): void;
 }
 
-/** This is the interface for an interaction plugin. 
+/** This is the interface for an interaction plugin.
  * @see: {@link http://msx.benzac.de/info/xp/?tab=InteractionPlugin}
-*/
+ */
 declare interface TVXInteractionPlugin {
     /**
      * Sets up the interaction handler (see TVXInteractionPluginHandler interface).
@@ -1980,14 +2000,14 @@ declare interface TVXInteractionPlugin {
     /**
      * Requests any data (e.g. "info", "video", "code", etc.).
      * @param dataId The data ID.
-     * @param callback The callback that contains the result data. 
+     * @param callback The callback that contains the result data.
      * @param data Any request-related data.
      */
     requestData(dataId: string, callback?: (data: MSXAttachedGeneric) => void, data?: AnyObject): void;
     /**
      * Requests a response from the player (handled by the video/audio plugin).
      * @param dataId The data ID.
-     * @param callback The callback that contains the result data. 
+     * @param callback The callback that contains the result data.
      * @param data Any request-related data.
      */
     requestPlayerResponse(dataId: string, callback?: (data: MSXAttachedResponse) => void, data?: AnyObject): void;
@@ -2085,7 +2105,7 @@ declare interface TVXInteractionPlugin {
      */
     removeContentObserver(name: string): void;
     /**
-     * Removes all content observers.     
+     * Removes all content observers.
      */
     clearContentObservers(): void;
     /** Initializes the interaction plugin. */
@@ -2094,8 +2114,8 @@ declare interface TVXInteractionPlugin {
     isInitialized(): boolean;
     /** Indicates if the interaction plugin is ready. */
     isReady(): boolean;
-    /** 
-     * Starts a loading process (shows a busy indicator after the loading delay). 
+    /**
+     * Starts a loading process (shows a busy indicator after the loading delay).
      * @param restart Indicates if a running loading delay should be restarted (default: true).
      */
     startLoading(restart?: boolean): void;
